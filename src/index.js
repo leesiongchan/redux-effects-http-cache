@@ -27,12 +27,14 @@ export default function httpCache() {
     }
 
     if (check(action.payload.url)) {
-      return Promise.resolve(get(action.payload.url));
+      return get(action.payload.url);
     }
 
-    // Cache the action!
-    set(action.payload.url, next(action));
+    const nextAction = next(action);
 
-    return next(action);
+    // Cache the action!
+    set(action.payload.url, nextAction);
+
+    return nextAction;
   };
 }
