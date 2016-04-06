@@ -1,0 +1,21 @@
+{
+  "name": "redux-effects-http-cache",
+  "description": "Cache HTTP requests",
+  "repository": "git://github.com/leesiongchan/redux-effects-http-cache.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "rm -rf lib && babel src --out-dir lib",
+    "postpublish": "rm -rf lib"
+  },
+  "dependencies": {
+    "redux-effects-fetch": "^0.4.5"
+  },
+  "devDependencies": {
+    "babel-preset-stage-2": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-tape-runner": "^2.0.0",
+    "tape": "^4.2.0"
+  }
+}
