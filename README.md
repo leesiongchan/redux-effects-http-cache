@@ -1,0 +1,1 @@
+# redux-effects-http-cache
