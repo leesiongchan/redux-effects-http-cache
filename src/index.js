@@ -45,10 +45,7 @@ export default function httpCache() {
 
     if (isRequestType(action)) {
       url = action.payload.url;
-      if (isPostRequest(action)) {
-        clear(url);
-      }
-      if (isPutRequest(action)) {
+      if (isPostRequest(action) || isPutRequest(action)) {
         clear(url);
       }
     }
